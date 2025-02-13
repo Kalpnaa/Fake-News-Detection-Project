@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Text-based Fake News Detection</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <script>
         async function checkText() {
             const text = document.getElementById("textInput").value;
@@ -19,9 +18,9 @@
 
             const data = await response.json();
             if(data.prediction == "FAKE"){
-                document.getElementById("result").innerText = "News seems to be fake " 
+                document.getElementById("result").innerText = "The accuracy of this news content remains subject to additional verification efforts" 
             } else {
-                document.getElementById("result").innerText = "News seems to be true " 
+                document.getElementById("result").innerText = "Our findings suggest that the information in this article is likely accurate" 
             }
             
         }
@@ -53,11 +52,7 @@
             color: white;
         }
 
-        #history-icon {
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
+       
         #title-container {
             text-align: center;
             flex-grow: 1;
@@ -73,14 +68,7 @@
             font-style: italic;
         }
 
-        #account-info {
-            display: flex;
-            align-items: center;
-            font-size: 1.1rem;
-            cursor: pointer;
-            color: white;
-        }
-
+        
 /* Content container styling */
         .container {
             padding: 40px 20px;
