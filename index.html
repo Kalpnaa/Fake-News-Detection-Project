@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake News Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            width: 70%;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+        .container:hover {
+            transform: scale(1.02);
+        }
+        .left {
+            flex: 1;
+            padding: 40px;
+            background-color: #007bff;
+            color: #fff;
+        }
+        .right {
+            flex: 1;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.5;
+        }
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        button {
+            padding: 15px 20px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            background-color: #28a745;
+            color: #fff;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class = "container">
+        <div class = "left">
+            <h1>Fake News Detection</h1>
+            <h3>Welcome !</h3>
+            <p>Please note that the content we analyze may not be 100% accurate, but we aim to provide you with the most reliable information possible.</p>
+        </div>
+
+        <div class = "right">
+            <p>Select the type of detection you want to perform:</p>
+            <div class = "button-group">
+                <button onclick="window.location.href='url_detection.html'">URL Detection</button>
+                <button onclick="window.location.href='text_detection.html'">Text Detection</button>
+            </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>
