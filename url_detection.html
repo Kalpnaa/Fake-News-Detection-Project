@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URL-based Fake News Detection</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <script>
         async function checkURL() {
             const url = document.getElementById("urlInput").value;
@@ -20,9 +19,9 @@
             const data = await response.json();
 
             if (data.prediction == "Unreliable") { 
-                document.getElementById("result").innerText = "News taken from unreliable source "
+                document.getElementById("result").innerText = "Please note that the information in this report is derived from an unverified source and may not be entirely accurate.";
             } else {
-                document.getElementById("result").innerText = "News taken from reliable source "
+                document.getElementById("result").innerText = "This article draws on data from sources that have been verified for their accuracy and reliability.";
             }
         }
     </script>
@@ -53,10 +52,7 @@
             color: white;
         }
 
-        #history-icon {
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
+       
 
         #title-container {
             text-align: center;
@@ -73,13 +69,7 @@
             font-style: italic;
         }
 
-        #account-info {
-            display: flex;
-            align-items: center;
-            font-size: 1.1rem;
-            cursor: pointer;
-            color: white;
-        }
+      
 
 /* Content container styling */
         .container {
